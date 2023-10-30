@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.wheel</groupId>
+        <artifactId>wheel-d-client</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>wheel-client-config-spring-boot-starter</artifactId>
+    <dependencies>
+        <!-- guns-roses 开发规则 -->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>cache-sdk-redis</artifactId>
+            <version>${roses.kernel.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>auth-sdk</artifactId>
+            <version>${roses.kernel.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>security-sdk-black-white</artifactId>
+            <version>${roses.kernel.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>security-sdk-count</artifactId>
+            <version>${roses.kernel.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>security-sdk-captcha</artifactId>
+            <version>${roses.kernel.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>wrapper-field-sdk</artifactId>
+            <version>${roses.kernel.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>

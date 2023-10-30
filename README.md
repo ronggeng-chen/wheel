@@ -1,10 +1,6 @@
 # wheel
 
-* 学习中
-* Learning
-* 勉強中
+**此工程是基于Roses框架实现**
 
+https://gitee.com/stylefeng/roses.git（Apache License 2.0）
 
-* 这是一个基于SpringBoot的服务框架
-* This is a service framework based on Spring Boot.
-* これはSpring Bootベースのサービスフレームワークです。

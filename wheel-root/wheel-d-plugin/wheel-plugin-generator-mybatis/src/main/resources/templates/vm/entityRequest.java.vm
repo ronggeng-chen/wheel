@@ -1,0 +1,51 @@
+package ${package.Other}.request;
+#foreach($pkg in ${table.importPackages})
+#if("$!pkg" != "com.baomidou.mybatisplus.annotation.IdType" &&
+"$!pkg" != "com.baomidou.mybatisplus.annotation.TableId" &&
+    "$!pkg" != "com.baomidou.mybatisplus.annotation.TableName" &&
+    "$!pkg" != "com.baomidou.mybatisplus.annotation.TableField" &&
+"$!pkg" != "java.io.Serializable"
+)
+import ${pkg};
+#end
+#end
+import cn.stylefeng.roses.kernel.rule.pojo.request.BaseRequest;
+#if(${entityLombokModel})
+import lombok.Getter;
+import lombok.Setter;
+#if(${chainModel})
+import lombok.experimental.Accessors;
+#end
+#end
+
+
+ /**
+  * $!{table.comment}
+  *
+  * @className: ${entity}
+  * @description:
+  * @author: ${author}
+  * @date: ${date}
+  **/
+#if(${entityLombokModel})
+@Getter
+@Setter
+  #if(${chainModel})
+@Accessors(chain = true)
+  #end
+#end
+
+public class ${entity}Request extends BaseRequest{
+
+## ----------  BEGIN 字段循环遍历  ----------
+#foreach($field in ${table.fields})
+
+#if("$!field.comment" != "")
+    /**
+     * ${field.comment}
+     */
+#end
+    private ${field.propertyType} ${field.propertyName};
+#end
+## ----------  END 字段循环遍历  ----------
+}

@@ -1,0 +1,114 @@
+package ${package.Controller};
+
+import ${package.Service}.${table.serviceName};
+import org.springframework.web.bind.annotation.RestController;
+import cn.stylefeng.roses.kernel.scanner.api.annotation.ApiResource;
+import cn.stylefeng.roses.kernel.scanner.api.annotation.GetResource;
+import cn.stylefeng.roses.kernel.scanner.api.annotation.PostResource;
+import cn.stylefeng.roses.kernel.rule.pojo.request.BaseRequest;
+import cn.stylefeng.roses.kernel.rule.pojo.response.ResponseData;
+import cn.stylefeng.roses.kernel.rule.pojo.response.SuccessResponseData;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.RequestBody;
+import ${package.Other}.request.${table.entityName}Request;
+
+/**
+ * ${table.comment} 前端控制器
+ *
+ * @className: ${table.controllerName}
+ * @description:
+ * @author: ${author}
+ * @date: ${date}
+ **/
+@RestController
+@ApiResource(name = "${table.comment}",path = "#if(${package.ModuleName})/${package.ModuleName}#end/#if(${controllerMappingHyphenStyle})${controllerMappingHyphen}#else${table.entityPath}#end")
+public class ${table.controllerName} {
+
+    @Autowired
+    ${table.serviceName} service;
+
+    /**
+     * 列表
+     * @author ${author}
+     * @date ${date}
+     * @param request
+     * @return cn.stylefeng.roses.kernel.rule.pojo.response.ResponseData<T>
+     **/
+    @GetResource(name = "列表", path = "/list")
+    public <T> ResponseData<T> list(@RequestBody @Validated(BaseRequest.list.class) ${table.entityName}Request request) {
+        return new SuccessResponseData<>(null);
+    }
+    /**
+     * 分页
+     * @author ${author}
+     * @date ${date}
+     * @param request
+     * @return cn.stylefeng.roses.kernel.rule.pojo.response.ResponseData<T>
+     **/
+    @GetResource(name = "分页", path = "/page")
+    public <T> ResponseData<T> page(@RequestBody @Validated(BaseRequest.page.class) ${table.entityName}Request request) {
+        return new SuccessResponseData<>(null);
+    }
+    /**
+     * 获取数据
+     * @author ${author}
+     * @date ${date}
+     * @param request
+     * @return cn.stylefeng.roses.kernel.rule.pojo.response.ResponseData<T>
+     **/
+    @GetResource(name = "获取数据", path = "/get")
+    public <T> ResponseData<T> get(@RequestBody @Validated(BaseRequest.detail.class) ${table.entityName}Request request) {
+        return new SuccessResponseData<>(null);
+    }
+
+    /**
+     * 获取详情
+     * @author ${author}
+     * @date ${date}
+     * @param request
+     * @return cn.stylefeng.roses.kernel.rule.pojo.response.ResponseData<T>
+     **/
+    @GetResource(name = "获取详情", path = "/getInfo")
+    public <T> ResponseData<T> getInfo(@RequestBody @Validated(BaseRequest.detail.class) ${table.entityName}Request request) {
+        return new SuccessResponseData<>(null);
+    }
+
+    /**
+     * 新增
+     * @author ${author}
+     * @date ${date}
+     * @param request
+     * @return cn.stylefeng.roses.kernel.rule.pojo.response.ResponseData<T>
+     **/
+    @PostResource(name = "新增", path = "/add")
+    public <T> ResponseData<T> add(@RequestBody @Validated(BaseRequest.add.class) ${table.entityName}Request request) {
+        return new SuccessResponseData<>();
+    }
+
+    /**
+     * 编辑
+     * @author ${author}
+     * @date ${date}
+     * @param request
+     * @return cn.stylefeng.roses.kernel.rule.pojo.response.ResponseData<T>
+     **/
+    @PostResource(name = "编辑", path = "/edit")
+    public <T> ResponseData<T> edit(@RequestBody @Validated(BaseRequest.edit.class) ${table.entityName}Request request) {
+        return new SuccessResponseData<>();
+    }
+
+    /**
+     * 删除
+     * @author ${author}
+     * @date ${date}
+     * @param request
+     * @return cn.stylefeng.roses.kernel.rule.pojo.response.ResponseData<T>
+     **/
+    @PostResource(name = "删除", path = "/delete")
+    public <T> ResponseData<T> delete(@RequestBody @Validated(BaseRequest.delete.class) ${table.entityName}Request request) {
+        return new SuccessResponseData<>();
+    }
+
+
+}

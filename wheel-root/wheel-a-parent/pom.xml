@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>wheel-root</artifactId>
+        <groupId>org.wheel</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <description>提供对外继承</description>
+    <artifactId>wheel-a-parent</artifactId>
+
+    <dependencies>
+        <!--========================wheel||spring.starter end========================-->
+        <!--认证和鉴权模块-->
+        <dependency>
+            <groupId>org.wheel</groupId>
+            <artifactId>wheel-client-auth-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wheel</groupId>
+            <artifactId>wheel-client-common-spring-boot-starter</artifactId>
+        </dependency>
+        <!--数据源管理模块-->
+        <dependency>
+            <groupId>org.wheel</groupId>
+            <artifactId>datasource-spring-boot-starter</artifactId>
+        </dependency>
+        <!--config模块-->
+        <dependency>
+            <groupId>org.wheel</groupId>
+            <artifactId>wheel-client-config-spring-boot-starter</artifactId>
+        </dependency>
+        <!--========================wheel||spring.starter end========================-->
+        <!--========================roses||spring.starter start========================-->
+        <!--认证和鉴权模块-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>auth-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--安全模块-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>security-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--系统配置-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>config-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--数据源连接和dao框架-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>db-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--文件管理-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>file-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--资源扫描-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>scanner-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--pinyin工具类-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>pinyin-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--字典业务-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>dict-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--参数校验模块-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>validator-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--系统管理基础业务-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>system-integration-rest</artifactId>
+        </dependency>
+
+        <!--c端用户-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>customer-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--办公处理-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>office-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--日志模块-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>log-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--定时任务-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>timer-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--短信模块-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>sms-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--消息通知-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>message-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--数据备份和迁移模块-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>migration-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--Socket模块-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>socket-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--wrapper工具-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>wrapper-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--多语言模块-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>i18n-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--多数据源配置-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>ds-container-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--硬件信息获取-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>monitor-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--默认增加内存缓存-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>memory-cache-spring-boot-starter</artifactId>
+        </dependency>
+        <!--========================roses||spring.starter end========================-->
+        <!--mysql-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+    </dependencies>
+    <build>
+        <!--配置Maven 对resource文件 过滤 -->
+        <resources>
+            <resource>
+                <!--不对src/main/webapp不进行占位符替换的处理-->
+                <directory>src/main/webapp</directory>
+                <filtering>false</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <!--表示对这些资源文件进行占位符替换的处理-->
+                <filtering>true</filtering>
+                <!--排除src/main/resources下所有文件-->
+                <excludes>
+                    <exclude>**/*.*</exclude>
+                </excludes>
+            </resource>
+            <!-- 不同环境只拷贝不同的 application-${spring.active}.yml 文件-->
+            <resource>
+                <directory>src/main/resources</directory>
+                <!--定义了要包含的资源文件的模式-->
+                <includes>
+                    <include>**/*.sql</include>
+                    <include>**/*.xml</include>
+                    <include>bootstrap.yml</include>
+                    <include>application.yml</include>
+                    <include>application-${spring.active}.yml</include>
+                    <include>logback-spring.xml</include>
+                    <include>license.dat</include>
+                    <include>license/**</include>
+                    <include>template/**</include>
+                </includes>
+                <!--表示对这些资源文件进行占位符替换的处理-->
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <spring.active>local</spring.active>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <spring.active>dev</spring.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <spring.active>test</spring.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <spring.active>prod</spring.active>
+            </properties>
+        </profile>
+    </profiles>
+</project>
