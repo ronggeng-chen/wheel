@@ -1,0 +1,52 @@
+## 模板引擎(未扩展其他引擎) vm: Velocity
+templateEngine: vm
+## 数据库配置
+database:
+  ## jdbc类型 (未扩展其他数据库) mysql
+  jdbcType: mysql
+  ## 数据库连接
+  url: jdbc:mysql://
+  ## 模式名
+  schema:
+  ## 用户名
+  userName: test
+  ## 密码
+  password: test
+
+## 基础配置
+config:
+  ## 为空默认当前项目
+  outputDir:
+  ## 作者
+  author: aGeng
+  ## 生成java包路径
+  packagePath: com.wheel.test
+  ## 实体类包名
+  entityPackage: po
+  ## 数据交互层包名
+  mapperPackage: dao
+  ## 数据交互映射Xm包名
+  mapperXmlPackage: mapper
+  ## 控制器包名
+  controllerPackage: controller
+  ## 服务类包名
+  servicePackage: service
+  ## 服务实现类包名
+  serviceImplPackage: service.impl
+  ## pojo类包生成位置 默认为当前项目，改配置主要针对pojo和api生成在别的模块
+  otherPackageOutputDir:
+  ## pojo类包名
+  otherPackage: pojo
+
+## 生成配置
+generator:
+  ## 数组[0] 是否生效
+  - enable: true
+    ## 删除前缀
+    filterPrefix: Bi
+    ## 数组[0] 模块名
+    moduleName: sys
+    ## 数组[0] 表名
+    tableCode: sys_app
+    ## 数组[0] 匹配表
+    likeTable: sys_
