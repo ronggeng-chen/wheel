@@ -7,17 +7,21 @@ import lombok.experimental.Accessors;
  * @author cheng
  * @version 1.0
  * @description:
- * @date 2023/10/31 0:01
+ * @date 2023/10/31 0:00
  */
 @Data
 @Accessors(chain = true)
-public class BaseOrderBO {
+public class SqlTableBO {
 
     private String key;
 
-    private String fieldKey;
+    private Boolean isMain;
 
-    private String orderType;
+    private String tableAlias;
+
+    private String tableCode;
+
+    private String tableName;
 
     private String description;
 }

@@ -16,9 +16,10 @@ public interface SqlParserConstants {
      * 异常枚举的步进值
      */
     interface EXCEPTION_STEP_CODE{
-        String DATASET = "1010";
-        String FILE = "1020";
-        String SQL = "1030";
+        String BASE = "1010";
+        String VIEW = "1020";
+        String FILE = "1030";
+        String SQL = "1040";
     }
 
     interface FieldType{

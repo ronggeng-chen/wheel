@@ -1,6 +1,5 @@
 package org.wheel.sqlparser.api.pojo.base;
 
-import cn.hutool.core.util.StrUtil;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import org.wheel.sqlparser.api.constants.SqlParserConstants;
@@ -13,7 +12,7 @@ import org.wheel.sqlparser.api.constants.SqlParserConstants;
  */
 @Data
 @Accessors(chain = true)
-public class BaseMeasureFieldBO implements IBaseField{
+public class SqlDimensionFieldBO implements ISqlField {
 
     private String key;
 
@@ -25,14 +24,11 @@ public class BaseMeasureFieldBO implements IBaseField{
 
     private String description;
 
+    private String sqlSnippet;
+
 
     @Override
     public String getFieldType() {
         return SqlParserConstants.FieldType.DIMENSION;
-    }
-
-    @Override
-    public String getSqlSnippet() {
-        return StrUtil.format("{}.{}",this.tableAlise,this.fieldCode);
     }
 }

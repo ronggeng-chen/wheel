@@ -9,29 +9,30 @@ import org.wheel.sqlparser.api.constants.SqlParserConstants;
  * @author cheng
  * @version 1.0
  * @description:
- * @date 2023/8/19 22:14
+ * @date 2023/10/30 23:46
  */
 @Data
 @Accessors(chain = true)
-public class BaseComputeConditionBO implements IBaseCondition{
+public class SqlMeasureFieldBO implements ISqlField {
 
     private String key;
 
-    private String leftSnippet;
+    private String tableAlise;
 
-    private String operator;
+    private String fieldCode;
 
-    private String valueType;
+    private String fieldName;
 
-    private Object value;
+    private String description;
+
 
     @Override
-    public String getConditionType() {
-        return SqlParserConstants.ConditionType.COMPUTE;
+    public String getFieldType() {
+        return SqlParserConstants.FieldType.DIMENSION;
     }
 
     @Override
     public String getSqlSnippet() {
-        return StrUtil.format("{} {} {}",this.leftSnippet,this.operator,this.value);
+        return StrUtil.format("{}.{}",this.tableAlise,this.fieldCode);
     }
 }

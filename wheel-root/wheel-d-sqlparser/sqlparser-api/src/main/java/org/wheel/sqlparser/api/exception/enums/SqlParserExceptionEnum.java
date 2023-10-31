@@ -14,12 +14,16 @@ import org.wheel.sqlparser.api.constants.SqlParserConstants;
  */
 @Getter
 @AllArgsConstructor
-public enum SqlParserDatasetEnum implements AbstractExceptionEnum {
+public enum SqlParserExceptionEnum implements AbstractExceptionEnum {
 
     /**
      * 异常错误
      */
-    B101001(RuleConstants.BUSINESS_ERROR_TYPE_CODE + SqlParserConstants.EXCEPTION_STEP_CODE.DATASET + "01", "异常错误");
+    B101001(RuleConstants.BUSINESS_ERROR_TYPE_CODE + SqlParserConstants.EXCEPTION_STEP_CODE.BASE + "01", "异常错误"),
+
+    SQL_PARSER_PARAM_ERROR(RuleConstants.BUSINESS_ERROR_TYPE_CODE + SqlParserConstants.EXCEPTION_STEP_CODE.BASE + "02", "SQL Parser 参数错误: {}"),
+
+    SQL_PARSER_TABLE_ERROR(RuleConstants.BUSINESS_ERROR_TYPE_CODE + SqlParserConstants.EXCEPTION_STEP_CODE.BASE + "03", "SQL Parser 解析源表失败: {}");
 
     /**
      * 错误编码

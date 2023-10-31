@@ -13,7 +13,7 @@ import java.util.List;
  */
 @Data
 @Accessors(chain = true)
-public class BaseFilterBO {
+public class SqlFilterBO {
     /**
      * 三元符
      */
@@ -21,10 +21,10 @@ public class BaseFilterBO {
     /**
      * 条件
      */
-    IBaseCondition condition;
+    ISqlCondition condition;
 
     /**
      * 子集
      */
-    private List<BaseFilterBO> children;
+    private List<SqlFilterBO> children;
 }

@@ -6,7 +6,7 @@ package org.wheel.sqlparser.api.pojo.base;
  * @description:
  * @date 2023/10/30 23:51
  */
-public interface IBaseField {
+public interface ISqlField {
 
 
     String getKey();

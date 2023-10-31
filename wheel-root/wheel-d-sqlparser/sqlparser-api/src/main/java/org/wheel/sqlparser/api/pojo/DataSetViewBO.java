@@ -2,10 +2,7 @@ package org.wheel.sqlparser.api.pojo;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
-import org.wheel.sqlparser.api.pojo.base.BaseFilterBO;
-import org.wheel.sqlparser.api.pojo.base.BaseOrderBO;
-import org.wheel.sqlparser.api.pojo.base.BaseTableBO;
-import org.wheel.sqlparser.api.pojo.base.IBaseField;
+import org.wheel.sqlparser.api.pojo.base.*;
 
 import java.util.List;
 
@@ -27,12 +24,14 @@ public class DataSetViewBO implements IDataSet{
 
     private String description;
 
-    private List<IBaseField> fields;
+    private List<ISqlField> fields;
 
-    private List<BaseTableBO> tables;
+    private List<SqlTableBO> tables;
 
-    private List<BaseOrderBO> orders;
+    private List<SqlTableJoinBO> sqlTableJoins;
 
-    private BaseFilterBO filter;
+    private List<SqlOrderBO> orders;
+
+    private SqlFilterBO filter;
 
 }

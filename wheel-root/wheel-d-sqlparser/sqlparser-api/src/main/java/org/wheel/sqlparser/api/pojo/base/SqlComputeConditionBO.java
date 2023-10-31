@@ -15,27 +15,25 @@ import java.util.List;
  */
 @Data
 @Accessors(chain = true)
-public class BaseNormalConditionBO implements IBaseCondition{
+public class SqlComputeConditionBO implements ISqlCondition {
 
     private String key;
 
-    private String tableAlise;
-
-    private String fieldCode;
+    private String leftSnippet;
 
     private String operator;
 
     private String valueType;
 
-    private Object value;
+    private List<Object> values;
 
     @Override
     public String getConditionType() {
-        return SqlParserConstants.ConditionType.NORMAL;
+        return SqlParserConstants.ConditionType.COMPUTE;
     }
 
     @Override
     public String getSqlSnippet() {
-        return StrUtil.format("{}.{} {} {}",this.tableAlise,this.fieldCode,this.operator,this.value);
+        return StrUtil.format("{} {}",this.leftSnippet,this.operator);
     }
 }

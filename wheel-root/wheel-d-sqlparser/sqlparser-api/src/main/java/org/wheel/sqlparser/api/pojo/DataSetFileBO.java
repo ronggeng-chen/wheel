@@ -2,7 +2,7 @@ package org.wheel.sqlparser.api.pojo;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
-import org.wheel.sqlparser.api.pojo.base.IBaseField;
+import org.wheel.sqlparser.api.pojo.base.ISqlField;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ public class DataSetFileBO implements IDataSet{
 
     private String dataSetName;
 
-    private List<IBaseField> fields;
+    private List<ISqlField> fields;
 
     private String fileName;
 

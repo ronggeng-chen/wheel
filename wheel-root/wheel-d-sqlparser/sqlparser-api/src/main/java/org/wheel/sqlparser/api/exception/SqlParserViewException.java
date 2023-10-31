@@ -11,14 +11,14 @@ import org.wheel.sqlparser.api.constants.SqlParserConstants;
  * @description:
  * @date 2023/10/30 23:13
  */
-public class SqlParserFileException extends ServiceException {
+public class SqlParserViewException extends ServiceException {
 
-    public SqlParserFileException(AbstractExceptionEnum exception, Object... params) {
+    public SqlParserViewException(AbstractExceptionEnum exception, Object... params) {
         super(SqlParserConstants.MODULE_NAME, exception.getErrorCode(), StrUtil.format(exception.getUserTip(), params));
     }
 
-    public SqlParserFileException(AbstractExceptionEnum exception) {
-        super(SqlParserConstants.EXCEPTION_STEP_CODE.FILE, exception);
+    public SqlParserViewException(AbstractExceptionEnum exception) {
+        super(SqlParserConstants.EXCEPTION_STEP_CODE.VIEW, exception);
     }
 
 }

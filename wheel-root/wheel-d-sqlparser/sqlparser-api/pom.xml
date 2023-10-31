@@ -21,15 +21,14 @@
 
         <dependency>
             <groupId>cn.stylefeng.roses</groupId>
-            <artifactId>config-api</artifactId>
+            <artifactId>validator-api</artifactId>
             <version>${roses.kernel.version}</version>
         </dependency>
 
-
         <dependency>
-            <groupId>cn.stylefeng.roses</groupId>
-            <artifactId>scanner-api</artifactId>
-            <version>${roses.kernel.version}</version>
+            <groupId>org.wheel</groupId>
+            <artifactId>datasource-api</artifactId>
+            <version>${wheel-root.version}</version>
         </dependency>
     </dependencies>
 
