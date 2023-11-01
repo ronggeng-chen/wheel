@@ -14,9 +14,9 @@
 
     <modules>
         <module>sqlparser-sdk-dataset</module>
-        <module>sqlparser-sdk-file</module>
-        <module>sqlparser-sdk-sql</module>
         <module>sqlparser-api</module>
+        <module>sqlparser-business</module>
         <module>sqlparser-spring-boot-starter</module>
+        <module>sqlparser-sdk-cube</module>
     </modules>
 </project>
