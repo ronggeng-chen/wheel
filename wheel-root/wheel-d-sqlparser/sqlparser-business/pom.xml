@@ -9,8 +9,6 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-
-    <artifactId>sqlparser-sdk-file</artifactId>
-
+    <artifactId>sqlparser-business</artifactId>
 
 </project>
