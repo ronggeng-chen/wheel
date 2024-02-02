@@ -11,6 +11,8 @@ import com.alibaba.druid.sql.ast.expr.SQLBinaryOpExpr;
 import com.alibaba.druid.sql.ast.expr.SQLIdentifierExpr;
 import com.alibaba.druid.sql.ast.expr.SQLNotExpr;
 import com.alibaba.druid.sql.ast.statement.*;
+import com.alibaba.druid.wall.WallConfig;
+import com.alibaba.druid.wall.WallFilter;
 import lombok.extern.slf4j.Slf4j;
 import org.wheel.datasource.api.enums.DbTypeEnum;
 import org.wheel.sqlparser.api.enums.ComparisonOperatorEnum;
@@ -147,4 +149,24 @@ public abstract class AbstractSqlSelectParser implements ISqlSelectParser {
         return fromExpr;
     }
 
+    @Override
+    public void checkValid() {
+        // 创建 WallFilter
+        WallConfig config = new WallConfig();
+        config.setMultiStatementAllow(true); // 允许多条语句
+        WallFilter wallFilter = new WallFilter();
+        wallFilter.setConfig(config);
+        if (!wallFilter.checkValid(this.sqlSelect.toString())) {
+            throw new SqlParserException(SqlParserExceptionEnum.SQL_PARSER_PARAM_ERROR);
+        }
+    }
+
+
+    @Override
+    public String toString() {
+        if (this.sqlSelect == null) {
+            this.init();
+        }
+        return this.sqlSelect.toString();
+    }
 }

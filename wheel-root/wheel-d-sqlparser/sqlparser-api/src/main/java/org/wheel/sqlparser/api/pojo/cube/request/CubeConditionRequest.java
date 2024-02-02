@@ -22,7 +22,7 @@ public class CubeConditionRequest {
     
     String fieldKey;
 
-    String valueType;
+    String operator;
 
     String operator;
 
