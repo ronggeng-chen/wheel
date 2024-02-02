@@ -2,8 +2,8 @@ package org.wheel.sqlparser.api.pojo.cube.request;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
-import org.wheel.sqlparser.api.pojo.dataset.bo.SqlOrderBO;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -18,11 +18,17 @@ public class CubeRequest {
 
     private String key;
 
+    private String dbType;
+
     private List<CubeFieldRequest> fields;
 
     private List<CubeConditionRequest> conditions;
 
-    private List<SqlOrderBO> sqlOrder;
+    private Date startTime;
+
+    private Date endTime;
+
+    private List<CubeOrderRequest> orders;
 
     private CubePageRequest page;
 

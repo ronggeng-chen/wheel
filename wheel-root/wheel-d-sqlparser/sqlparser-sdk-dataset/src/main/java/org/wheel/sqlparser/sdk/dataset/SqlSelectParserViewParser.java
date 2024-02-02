@@ -5,11 +5,10 @@ import com.alibaba.druid.sql.ast.SQLOrderBy;
 import com.alibaba.druid.sql.ast.statement.*;
 import lombok.SneakyThrows;
 import org.wheel.datasource.api.enums.DbTypeEnum;
-import org.wheel.sqlparser.api.exception.SqlParserException;
-import org.wheel.sqlparser.api.exception.enums.SqlParserExceptionEnum;
 import org.wheel.sqlparser.api.pojo.dataset.bo.DataSetViewBO;
 import org.wheel.sqlparser.api.pojo.dataset.bo.IDataSet;
 import org.wheel.sqlparser.api.pojo.dataset.bo.ISqlField;
+import org.wheel.sqlparser.api.pojo.dataset.bo.SqlFilterBO;
 
 import java.util.List;
 
@@ -24,7 +23,8 @@ public class SqlSelectParserViewParser extends AbstractSqlSelectParser {
 
     @SneakyThrows
     @Override
-    public SQLSelect createSqlSelect() {
+    public void init() {
+        this.sqlSelect = null;
         SQLSelectQueryBlock selectBody = (SQLSelectQueryBlock) this.dbTypeEnum.getSqlSelectQueryBlockClass().newInstance();
         SQLTableSource fromExpr = this.createFromExpr(this.dataSet.getTables(), this.dataSet.getSqlTableJoins());
         SQLExpr conditionExpr = this.createWhereExpr(this.dataSet.getFilter());
@@ -32,28 +32,40 @@ public class SqlSelectParserViewParser extends AbstractSqlSelectParser {
         selectBody.setFrom(fromExpr);
         selectBody.setWhere(conditionExpr);
         selectBody.setOrderBy(sortExpr);
-        return new SQLSelect(selectBody);
+        this.sqlSelect = new SQLSelect(selectBody);
     }
 
     @Override
-    public SQLSelect createSqlSelect(List<ISqlField> fields) {
-        SQLSelect sqlSelect = this.createSqlSelect();
-        return createSqlSelect(sqlSelect, fields);
-    }
-
-    @Override
-    public SQLSelect createSqlSelect(SQLSelect sqlSelect, List<ISqlField> fields) {
-        if (sqlSelect == null) {
-            throw new SqlParserException(SqlParserExceptionEnum.SQL_PARSER_TABLE_ERROR, "createSqlSelect sqlSelect对象为空");
+    public SQLSelect generateFieldSqlExpr(List<ISqlField> fields) {
+        if (this.sqlSelect == null) {
+            this.init();
         }
         List<SQLSelectItem> selectFieldExpr = this.createSelectFieldExpr(fields);
         SQLSelectGroupByClause groupExpr = this.createGroupExpr(fields);
-        sqlSelect.getQueryBlock().setGroupBy(groupExpr);
+        this.sqlSelect.getQueryBlock().setGroupBy(groupExpr);
         selectFieldExpr.forEach(expr -> {
-            sqlSelect.getQueryBlock().addSelectItem(expr);
+            this.sqlSelect.getQueryBlock().addSelectItem(expr);
         });
-        return sqlSelect;
+        return this.sqlSelect;
     }
 
 
+    @Override
+    public SQLSelect generateFilterSqlExpr(SqlFilterBO filter) {
+        if (this.sqlSelect == null) {
+            this.init();
+        }
+        SQLExpr whereExpr = this.createWhereExpr(filter);
+        this.sqlSelect.getQueryBlock().setWhere(whereExpr);
+        return this.sqlSelect;
+    }
+
+
+    @Override
+    public String toString() {
+        if (this.sqlSelect == null) {
+            this.init();
+        }
+        return this.sqlSelect.toString();
+    }
 }

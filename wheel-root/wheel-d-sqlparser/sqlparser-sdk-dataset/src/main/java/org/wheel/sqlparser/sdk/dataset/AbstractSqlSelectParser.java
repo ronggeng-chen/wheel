@@ -29,6 +29,8 @@ public abstract class AbstractSqlSelectParser implements ISqlSelectParser {
 
     protected DbTypeEnum dbTypeEnum;
 
+    protected SQLSelect sqlSelect;
+
     public AbstractSqlSelectParser(DbTypeEnum dbTypeEnum, IDataSet dataSet) {
         this.dbTypeEnum = dbTypeEnum;
     }

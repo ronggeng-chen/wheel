@@ -27,11 +27,11 @@ public interface ISqlSelectParser {
 
     SQLOrderBy createSortExpr(List<SqlOrderBO> sqlSortList);
 
-    SQLSelect createSqlSelect();
+    void init();
 
-    SQLSelect createSqlSelect(List<ISqlField> baseFieldList);
+    SQLSelect generateFieldSqlExpr(List<ISqlField> fields);
 
-    SQLSelect createSqlSelect(SQLSelect sqlSelect, List<ISqlField> fields);
+    SQLSelect generateFilterSqlExpr(SqlFilterBO filter);
 
 
 }

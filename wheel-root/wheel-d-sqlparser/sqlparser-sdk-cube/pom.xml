@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>org.wheel</groupId>
-            <artifactId>sqlparser-sdk-cube</artifactId>
+            <artifactId>sqlparser-sdk-dataset</artifactId>
             <version>${wheel-root.version}</version>
         </dependency>
     </dependencies>

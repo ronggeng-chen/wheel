@@ -1,5 +1,7 @@
 package org.wheel.sqlparser.api.pojo.dataset.bo;
 
+import java.util.Map;
+
 /**
  * @author cheng
  * @version 1.0
@@ -13,5 +15,11 @@ public interface IDataSet {
     String getDataSetCode();
 
     String getDataSetName();
+
+    String getDataSetType();
+
+    Map<String, ISqlField> getFieldMap();
+
+    String getTimeField();
 
 }

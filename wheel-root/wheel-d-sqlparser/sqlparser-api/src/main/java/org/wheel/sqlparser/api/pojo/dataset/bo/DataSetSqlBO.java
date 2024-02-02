@@ -2,8 +2,9 @@ package org.wheel.sqlparser.api.pojo.dataset.bo;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
+import org.wheel.sqlparser.api.enums.DataSetTypeEnum;
 
-import java.util.List;
+import java.util.Map;
 
 /**
  * @author cheng
@@ -21,8 +22,18 @@ public class DataSetSqlBO implements IDataSet {
 
     private String dataSetName;
 
-    private List<ISqlField> fields;
+    private String description;
 
+    private String dataSetType;
+
+    private Map<String, ISqlField> fieldMap;
+
+    private String timeField;
+    
     private String sql;
 
+    @Override
+    public String getDataSetType() {
+        return DataSetTypeEnum.SQL.getCode();
+    }
 }

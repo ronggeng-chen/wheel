@@ -33,28 +33,28 @@ public enum StatisticalMethodEnum {
 
     HQ("hq", FieldTypeEnum.METRIC.getCode(), "环期"),
 
-    median("median", FieldTypeEnum.METRIC.getCode(), "中位数"),
-
     TB("tb", FieldTypeEnum.INDICATOR.getCode(), "同比"),
 
     HB("hb", FieldTypeEnum.INDICATOR.getCode(), "环比"),
 
-    CASE("case", FieldTypeEnum.INDICATOR.getCode(), "case"),
+    MEDIAN("median", FieldTypeEnum.METRIC.getCode(), "中位数"),
+
+    CUSTOM("custom", FieldTypeEnum.INDICATOR.getCode(), "自定义"),
 
     EMPTY("empty", FieldTypeEnum.EMPTY.getCode(), "空对象");
 
     /**
-     * 错误编码
+     * 统计方法
      */
     private final String code;
 
     /**
-     * 错误编码
+     * 统计方法类型
      */
     private final String fieldType;
 
     /**
-     * 提示用户信息
+     * 名称
      */
     private final String name;
 
@@ -62,4 +62,36 @@ public enum StatisticalMethodEnum {
     public static StatisticalMethodEnum getEnum(String code) {
         return Arrays.stream(StatisticalMethodEnum.values()).filter(node -> StrUtil.equals(node.getCode(), code)).findAny().orElse(EMPTY);
     }
+
+    public static String getFieldAlise(StatisticalMethodEnum statisticalMethodEnum, String domainKey, String alise) {
+        String toAlise = "";
+        if (StrUtil.isNotBlank(domainKey)) {
+            toAlise += domainKey;
+        }
+        if (statisticalMethodEnum == EMPTY) {
+            toAlise += "_" + StatisticalMethodEnum.CUSTOM.getCode() + "_" + alise;
+        } else {
+            toAlise += "_" + statisticalMethodEnum.getCode() + "_" + alise;
+        }
+        return toAlise;
+    }
+
+    public String getFieldSqlSnippet(StatisticalMethodEnum statisticalMethodEnum, String domainKey, String sqlSnippet) {
+        if (statisticalMethodEnum == TQ || statisticalMethodEnum == HQ) {
+            return sqlSnippet;
+        } else if (statisticalMethodEnum == TB) {
+            String tqFieldAlise = getFieldAlise(StatisticalMethodEnum.TQ, sqlContext);
+            String customFieldAlise = getFieldAlise(StatisticalMethodEnum.CUSTOM, sqlContext);
+            return StrUtil.format("({}-{})/{}", customFieldAlise, tqFieldAlise, tqFieldAlise);
+        } else if (statisticalMethodEnum == HB) {
+            String hqFieldAlise = getFieldAlise(StatisticalMethodEnum.HQ, sqlContext);
+            String customFieldAlise = getFieldAlise(StatisticalMethodEnum.CUSTOM, sqlContext);
+            return StrUtil.format("({}-{})/{}", customFieldAlise, hqFieldAlise, hqFieldAlise);
+        } else if (statisticalMethodEnum == MEDIAN || statisticalMethodEnum == CUSTOM) {
+            return sqlContext;
+        } else {
+            return StrUtil.format("{}({})", statisticalMethodEnum.getCode(), sqlContext);
+        }
+    }
+
 }
