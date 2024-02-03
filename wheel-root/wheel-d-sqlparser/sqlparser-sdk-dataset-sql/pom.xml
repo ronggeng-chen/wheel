@@ -9,12 +9,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>sqlparser-sdk-cube</artifactId>
-    
+    <artifactId>sqlparser-sdk-dataset-sql</artifactId>
     <dependencies>
         <dependency>
             <groupId>org.wheel</groupId>
-            <artifactId>sqlparser-sdk-dataset</artifactId>
+            <artifactId>sqlparser-api</artifactId>
             <version>${wheel-root.version}</version>
         </dependency>
     </dependencies>

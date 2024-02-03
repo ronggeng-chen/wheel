@@ -13,10 +13,12 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>sqlparser-sdk-dataset</module>
-        <module>sqlparser-sdk-file</module>
-        <module>sqlparser-sdk-sql</module>
         <module>sqlparser-api</module>
         <module>sqlparser-spring-boot-starter</module>
+        <module>sqlparser-sdk-cube</module>
+        <module>sqlparser-sdk-dataset</module>
+        <module>sqlparser-sdk-dataset-file</module>
+        <module>sqlparser-sdk-dataset-view</module>
+        <module>sqlparser-sdk-dataset-sql</module>
     </modules>
 </project>

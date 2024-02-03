@@ -15,13 +15,16 @@ public interface SqlParserConstants {
     /**
      * 异常枚举的步进值
      */
-    interface EXCEPTION_STEP_CODE{
-        String DATASET = "1010";
-        String FILE = "1020";
-        String SQL = "1030";
+    interface EXCEPTION_STEP_CODE {
+        String BASE = "1010";
+        String CUBE = "1020";
+        String DATASET = "1030";
+        String DATASET_VIEW = "1040";
+        String DATASET_FILE = "1050";
+        String DATASET_SQL = "1060";
     }
 
-    interface FieldType{
+    interface FieldType {
         /**
          * 维度
          */
@@ -33,7 +36,7 @@ public interface SqlParserConstants {
 
     }
 
-    interface ConditionType{
+    interface ConditionType {
         /**
          * 正常条件 A字段 = Value
          */

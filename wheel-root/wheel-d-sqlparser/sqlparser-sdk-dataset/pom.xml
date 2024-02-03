@@ -8,15 +8,27 @@
         <artifactId>wheel-d-sqlparser</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
-
     <artifactId>sqlparser-sdk-dataset</artifactId>
-    <packaging>jar</packaging>
     <dependencies>
         <dependency>
             <groupId>org.wheel</groupId>
             <artifactId>sqlparser-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${wheel-root.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wheel</groupId>
+            <artifactId>sqlparser-sdk-dataset-sql</artifactId>
+            <version>${wheel-root.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wheel</groupId>
+            <artifactId>sqlparser-sdk-dataset-file</artifactId>
+            <version>${wheel-root.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wheel</groupId>
+            <artifactId>sqlparser-sdk-dataset-view</artifactId>
+            <version>${wheel-root.version}</version>
         </dependency>
     </dependencies>
 </project>
