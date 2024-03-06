@@ -41,7 +41,7 @@ public abstract class AbstractDataSetSqlParser implements IDataSetSqlParser {
     public List<SQLSelectItem> createSelectFieldExpr(List<ISqlField> baseFieldList) {
         List<SQLSelectItem> sqlSelectItems = new ArrayList<>();
         for (ISqlField field : baseFieldList) {
-            SQLSelectItem selectItemExpr = SqlSelectParserToolUtil.createSelectItemExpr(field.getSqlSnippet(), field.getKey());
+            SQLSelectItem selectItemExpr = SqlSelectParserToolUtil.createSelectItemExpr(field.getSqlSnippet(), field.getFieldCode());
             sqlSelectItems.add(selectItemExpr);
         }
         return sqlSelectItems;

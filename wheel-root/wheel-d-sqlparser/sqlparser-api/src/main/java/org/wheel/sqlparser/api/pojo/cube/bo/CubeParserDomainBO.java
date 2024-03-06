@@ -19,7 +19,7 @@ public class CubeParserDomainBO {
 
     List<CubeParserDomainFieldBO> fields;
 
-    List<CubeConditionRequest>
+    List<CubeConditionRequest> conditionRequests;
 
     public CubeParserDomainBO() {
         this.fields = new ArrayList<>();

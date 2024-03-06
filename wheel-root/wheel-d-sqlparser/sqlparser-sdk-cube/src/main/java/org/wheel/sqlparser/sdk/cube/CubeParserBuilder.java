@@ -21,9 +21,9 @@ public class CubeParserBuilder {
     private CubeParserBO cubeParser;
 
     CubeParserBuilder generateCubeParser(CubeRequest request) {
-        CubeParserGenerateFactory instance = CubeParserGenerateFactory.getInstance(request);
+       /* CubeParserGenerateFactory instance = CubeParserGenerateFactory.getInstance(request);
         instance.generate();
-        this.cubeParser = instance.getCubeParserBO();
+        this.cubeParser = instance.getCubeParserBO();*/
         return this;
     }
 
@@ -39,5 +39,6 @@ public class CubeParserBuilder {
                 selectSqlField.add(iSqlField);
             });
         });
+        return this;
     }
 }
