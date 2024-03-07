@@ -9,4 +9,12 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <artifactId>wheel-bi-cfg</artifactId>
+    <version>${wheel-bi.version}</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.wheel.bi</groupId>
+            <artifactId>wheel-bi-api</artifactId>
+            <version>${wheel-bi.version}</version>
+        </dependency>
+    </dependencies>
 </project>

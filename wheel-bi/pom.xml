@@ -11,12 +11,14 @@
     <groupId>org.wheel.bi</groupId>
     <artifactId>wheel-bi</artifactId>
     <packaging>pom</packaging>
-
+    <properties>
+        <wheel-bi.version>1.0-SNAPSHOT</wheel-bi.version>
+    </properties>
     <modules>
         <module>wheel-bi-cfg</module>
-        <module>wheel-bi-dataset</module>
+        <module>wheel-bi-ds</module>
         <module>wheel-bi-exp</module>
-        <module>wheel-bi-visual</module>
+        <module>wheel-bi-ve</module>
         <module>wheel-bi-api</module>
         <module>wheel-bi-app</module>
     </modules>

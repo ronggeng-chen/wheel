@@ -18,7 +18,7 @@ public interface BIConstants {
     interface EXCEPTION_STEP_CODE {
         String BASE = "BI-BASE-";
         String CFG = "BI-CFG-";
-        String DATASET = "BI-DATASET-";
+        String DS = "BI-DATASET-";
         String EXP = "BI-EXP-";
         String VE = "BI-VE-";
 

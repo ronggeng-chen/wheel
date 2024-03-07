@@ -14,16 +14,16 @@ import org.wheel.sqlparser.api.constants.BIConstants;
  */
 @Getter
 @AllArgsConstructor
-public enum DatasetExceptionEnum implements AbstractExceptionEnum {
+public enum DsExceptionEnum implements AbstractExceptionEnum {
 
     /**
      * 异常错误
      */
-    DEFAULT(RuleConstants.BUSINESS_ERROR_TYPE_CODE + BIConstants.EXCEPTION_STEP_CODE.DATASET + "01", "异常错误"),
+    DEFAULT(RuleConstants.BUSINESS_ERROR_TYPE_CODE + BIConstants.EXCEPTION_STEP_CODE.DS + "01", "异常错误"),
     /**
      * 参数错误
      */
-    PARAM_ERROR(RuleConstants.BUSINESS_ERROR_TYPE_CODE + BIConstants.EXCEPTION_STEP_CODE.DATASET + "02", "参数错误");
+    PARAM_ERROR(RuleConstants.BUSINESS_ERROR_TYPE_CODE + BIConstants.EXCEPTION_STEP_CODE.DS + "02", "参数错误");
 
     /**
      * 错误编码

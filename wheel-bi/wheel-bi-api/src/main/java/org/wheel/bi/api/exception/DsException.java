@@ -11,14 +11,14 @@ import org.wheel.sqlparser.api.constants.BIConstants;
  * @description:
  * @date 2023/10/30 23:13
  */
-public class DatasetException extends ServiceException {
+public class DsException extends ServiceException {
 
-    public DatasetException(AbstractExceptionEnum exception, Object... params) {
+    public DsException(AbstractExceptionEnum exception, Object... params) {
         super(BIConstants.MODULE_NAME, exception.getErrorCode(), StrUtil.format(exception.getUserTip(), params));
     }
 
-    public DatasetException(AbstractExceptionEnum exception) {
-        super(BIConstants.EXCEPTION_STEP_CODE.DATASET, exception);
+    public DsException(AbstractExceptionEnum exception) {
+        super(BIConstants.EXCEPTION_STEP_CODE.DS, exception);
     }
 
 }

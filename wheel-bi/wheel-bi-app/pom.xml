@@ -9,4 +9,26 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <artifactId>wheel-bi-app</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.wheel.bi</groupId>
+            <artifactId>wheel-bi-ds</artifactId>
+            <version>${wheel-bi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wheel.bi</groupId>
+            <artifactId>wheel-bi-cfg</artifactId>
+            <version>${wheel-bi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wheel.bi</groupId>
+            <artifactId>wheel-bi-exp</artifactId>
+            <version>${wheel-bi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wheel.bi</groupId>
+            <artifactId>wheel-bi-ve</artifactId>
+            <version>${wheel-bi.version}</version>
+        </dependency>
+    </dependencies>
 </project>
