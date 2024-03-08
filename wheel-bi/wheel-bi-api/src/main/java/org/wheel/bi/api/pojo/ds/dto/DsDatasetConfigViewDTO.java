@@ -9,11 +9,14 @@ import java.util.List;
 @Getter
 @Setter
 @Accessors(chain = true)
-
 public class DsDatasetConfigViewDTO {
 
-    private List<DsDatasetConfigViewTableDTO> tableList;
+    private List<DsDatasetConfigViewTableDTO> tables;
 
-    private List<DsDatasetConfigViewJoinDTO> joinList;
+    private List<DsDatasetConfigViewJoinDTO> joins;
+
+    private DsDatasetConfigViewFilterDTO filter;
+
+    private List<DsDatasetConfigViewOrderDTO> orders;
 
 }

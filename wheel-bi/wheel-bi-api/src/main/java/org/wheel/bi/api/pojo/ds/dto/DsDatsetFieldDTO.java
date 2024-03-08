@@ -46,7 +46,7 @@ public class DsDatsetFieldDTO {
     /**
      * SQL片段
      */
-    private String sqlSegment;
+    private String sqlExpr;
 
     /**
      * 描述
