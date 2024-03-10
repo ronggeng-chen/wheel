@@ -28,7 +28,7 @@
         <!--jdk版本-->
         <java.version>1.8</java.version>
         <!--roses-->
-        <roses.kernel.version>7.3.4</roses.kernel.version>
+        <roses.kernel.version>8.1.1</roses.kernel.version>
         <!--========================工具包插件 start========================-->
         <!--hutool 工具包集合 url： https://www.hutool.cn/docs/       -->
         <hutool.version>5.8.16</hutool.version>
@@ -152,171 +152,22 @@
             <!--========================spring||spring.starter end========================-->
 
             <!--========================roses||spring.starter start========================-->
-            <!--认证和鉴权模块-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>auth-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--安全模块-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>security-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--系统配置-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>config-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--数据源连接和dao框架-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>db-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--文件管理-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>file-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--资源扫描-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>scanner-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--pinyin工具类-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>pinyin-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--字典业务-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>dict-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--参数校验模块-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>validator-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
             <!--系统管理基础业务-->
             <dependency>
                 <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>system-integration-rest</artifactId>
+                <artifactId>system-spring-boot-starter</artifactId>
                 <version>${roses.kernel.version}</version>
             </dependency>
-
-            <!--c端用户-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>customer-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--办公处理-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>office-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--日志模块-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>log-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--定时任务-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>timer-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--短信模块-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>sms-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--消息通知-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>message-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--数据备份和迁移模块-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>migration-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--Socket模块-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>socket-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--wrapper工具-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>wrapper-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--多语言模块-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>i18n-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--多数据源配置-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>ds-container-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--硬件信息获取-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>monitor-spring-boot-starter</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
-            <!--演示环境api-->
-            <dependency>
-                <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>demo-api</artifactId>
-                <version>${roses.kernel.version}</version>
-            </dependency>
-
             <!--默认增加内存缓存-->
             <dependency>
                 <groupId>cn.stylefeng.roses</groupId>
-                <artifactId>memory-cache-spring-boot-starter</artifactId>
+                <artifactId>cache-spring-boot-starter-memory</artifactId>
+                <version>${roses.kernel.version}</version>
+            </dependency>
+            <!--默认增加内存缓存-->
+            <dependency>
+                <groupId>cn.stylefeng.roses</groupId>
+                <artifactId>cache-spring-boot-starter-redis</artifactId>
                 <version>${roses.kernel.version}</version>
             </dependency>
 

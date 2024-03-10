@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>wheel-client-auth-spring-boot-starter</artifactId>
-    
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -20,12 +20,6 @@
         <dependency>
             <groupId>cn.stylefeng.roses</groupId>
             <artifactId>auth-sdk</artifactId>
-            <version>${roses.kernel.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>cn.stylefeng.roses</groupId>
-            <artifactId>security-sdk-cors</artifactId>
             <version>${roses.kernel.version}</version>
             <scope>provided</scope>
         </dependency>

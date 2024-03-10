@@ -19,8 +19,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Accessors(chain = true)
-
-public class DsDatsetFieldDTO {
+public class DsDatasetFieldDTO {
 
 
     /**
@@ -42,6 +41,11 @@ public class DsDatsetFieldDTO {
      * 字段类型
      */
     private String fieldType;
+
+    /**
+     * 数据集编码
+     */
+    private String datasetCode;
 
     /**
      * SQL片段

@@ -45,9 +45,13 @@ public class DsDatsetFieldRequest extends BaseRequest {
     private String fieldType;
 
     /**
+     * 数据集编码
+     */
+    private String datasetCode;
+    /**
      * SQL片段
      */
-    private String sqlSegment;
+    private String sqlExpr;
 
     /**
      * 描述

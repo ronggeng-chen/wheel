@@ -40,14 +40,28 @@ public class DsDatasetDTO {
     private String datsetName;
 
     /**
-     * 数据集类型
-     */
-    private String datsetType;
-
-    /**
      * 数据库编码
      */
     private String dbCode;
+
+    /**
+     * 数据集类型
+     */
+    private String datsetType;
+    /**
+     * 数据集配置-文件
+     */
+    private DsDatasetConfigFileDTO datsetConifgFile;
+
+    /**
+     * 数据集配置-视图
+     */
+    private DsDatasetConfigViewDTO datsetConfigView;
+
+    /**
+     * 数据集配置-SQL
+     */
+    private DsDatasetConfigSqlDTO datsetConfigSql;
 
     /**
      * 数据集配置

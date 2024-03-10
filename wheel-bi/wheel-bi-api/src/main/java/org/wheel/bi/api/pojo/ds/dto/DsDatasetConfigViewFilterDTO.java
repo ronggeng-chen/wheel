@@ -16,4 +16,5 @@ public class DsDatasetConfigViewFilterDTO {
     private List<DsDatasetConfigViewFilterConditionDO> conditions;
 
     private List<DsDatasetConfigViewFilterDTO> groups;
+
 }

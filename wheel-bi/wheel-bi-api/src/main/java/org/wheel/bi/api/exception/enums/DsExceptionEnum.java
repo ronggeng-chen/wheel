@@ -4,7 +4,7 @@ import cn.stylefeng.roses.kernel.rule.constants.RuleConstants;
 import cn.stylefeng.roses.kernel.rule.exception.AbstractExceptionEnum;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import org.wheel.sqlparser.api.constants.BIConstants;
+import org.wheel.bi.api.constants.DsConstants;
 
 /**
  * @author cheng
@@ -19,11 +19,14 @@ public enum DsExceptionEnum implements AbstractExceptionEnum {
     /**
      * 异常错误
      */
-    DEFAULT(RuleConstants.BUSINESS_ERROR_TYPE_CODE + BIConstants.EXCEPTION_STEP_CODE.DS + "01", "异常错误"),
+    DEFAULT(RuleConstants.BUSINESS_ERROR_TYPE_CODE + DsConstants.EXCEPTION_STEP_CODE.DATASET + "01", "异常错误;{}"),
     /**
      * 参数错误
      */
-    PARAM_ERROR(RuleConstants.BUSINESS_ERROR_TYPE_CODE + BIConstants.EXCEPTION_STEP_CODE.DS + "02", "参数错误");
+    PARAM_ERROR(RuleConstants.BUSINESS_ERROR_TYPE_CODE + DsConstants.EXCEPTION_STEP_CODE.DATASET + "02", "参数错误;{}"),
+
+    DATASET_01(RuleConstants.BUSINESS_ERROR_TYPE_CODE + DsConstants.EXCEPTION_STEP_CODE.DATASET + "03", "无效数据集类型;{}");
+
 
     /**
      * 错误编码
