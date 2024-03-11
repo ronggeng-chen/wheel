@@ -4,14 +4,17 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Accessors(chain = true)
 public class DsDatasetConfigViewFilterDTO {
 
-    private Integer orderNumber;
+    private String ternary;
 
-    private String sqlExpr;
+    private List<DsDatasetConfigViewFilterConditionDO> conditions;
 
-    private String orderType;
+    private List<DsDatasetConfigViewFilterDTO> groups;
+
 }

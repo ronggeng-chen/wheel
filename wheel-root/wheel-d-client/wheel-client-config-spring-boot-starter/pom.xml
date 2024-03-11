@@ -10,42 +10,25 @@
     </parent>
     <artifactId>wheel-client-config-spring-boot-starter</artifactId>
     <dependencies>
-        <!-- guns-roses 开发规则 -->
         <dependency>
             <groupId>cn.stylefeng.roses</groupId>
-            <artifactId>cache-sdk-redis</artifactId>
+            <artifactId>auth-api</artifactId>
             <version>${roses.kernel.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>cn.stylefeng.roses</groupId>
-            <artifactId>auth-sdk</artifactId>
+            <artifactId>demo-api</artifactId>
             <version>${roses.kernel.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>cn.stylefeng.roses</groupId>
-            <artifactId>security-sdk-black-white</artifactId>
-            <version>${roses.kernel.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>cn.stylefeng.roses</groupId>
-            <artifactId>security-sdk-count</artifactId>
-            <version>${roses.kernel.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>cn.stylefeng.roses</groupId>
-            <artifactId>security-sdk-captcha</artifactId>
-            <version>${roses.kernel.version}</version>
-            <scope>provided</scope>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
         </dependency>
         <dependency>
             <groupId>cn.stylefeng.roses</groupId>
             <artifactId>wrapper-field-sdk</artifactId>
-            <version>${roses.kernel.version}</version>
-            <scope>provided</scope>
+            <version>8.1.1</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>

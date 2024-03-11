@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Accessors(chain = true)
@@ -16,5 +18,7 @@ public class DsDatasetConfigFileDTO {
     String suffix;
 
     String syncTableCode;
+
+    List<DsDatasetConfigFileFieldDTO> syncFields;
 
 }

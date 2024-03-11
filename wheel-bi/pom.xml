@@ -22,4 +22,13 @@
         <module>wheel-bi-api</module>
         <module>wheel-bi-app</module>
     </modules>
+
+    <dependencies>
+
+        <!--Redis缓存-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>cache-spring-boot-starter-redis</artifactId>
+        </dependency>
+    </dependencies>
 </project>

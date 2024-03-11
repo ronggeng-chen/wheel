@@ -9,7 +9,11 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class DsDatasetConfigViewOrderDTO {
 
-    private Integer orderNumber;
+    private String orderNum;
+
+    private String tableAlise;
+
+    private String fieldCode;
 
     private String sqlExpr;
 
