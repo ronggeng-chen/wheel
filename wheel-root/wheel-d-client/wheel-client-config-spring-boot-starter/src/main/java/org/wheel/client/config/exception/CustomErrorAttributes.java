@@ -19,7 +19,7 @@ import java.util.Map;
  * @since 2020/12/16 14:36
  */
 public class CustomErrorAttributes extends DefaultErrorAttributes {
-    
+
     @Override
     public Map<String, Object> getErrorAttributes(WebRequest webRequest, ErrorAttributeOptions attributeOptions) {
 
@@ -44,4 +44,5 @@ public class CustomErrorAttributes extends DefaultErrorAttributes {
         // 4.无法确定的返回服务器异常
         return BeanUtil.beanToMap(new ErrorResponseData<>(DefaultBusinessExceptionEnum.SYSTEM_RUNTIME_ERROR.getErrorCode(), DefaultBusinessExceptionEnum.SYSTEM_RUNTIME_ERROR.getUserTip()));
     }
+
 }

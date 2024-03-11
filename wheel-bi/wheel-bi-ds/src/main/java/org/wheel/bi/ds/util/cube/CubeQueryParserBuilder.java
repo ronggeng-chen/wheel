@@ -67,7 +67,7 @@ public class CubeQueryParserBuilder {
                         SQLSelect clone = sqlSelect.clone();
                         DsCubeQueryParserDomainBO tSqDomain = createTSqDomain(datasetCode);
                         tSqDomain.setFromSqlSelect(clone);
-                        tSqDomain.getFieldMap().put(tSqDomain.getDomainCode()+"_");
+                        //tSqDomain.getFieldMap().put(tSqDomain.getDomainCode()+"_");
 
                     } else if (cubeFieldStatisticalMethodEnum == DsCubeFieldStatisticalMethodEnum.MEDIAN) {
 
@@ -78,7 +78,7 @@ public class CubeQueryParserBuilder {
             DsCubeQueryParserDomainBO cubeQueryParserDomainBO = new DsCubeQueryParserDomainBO();
             cubeQueryParserDomainBO.setDomainCode(datasetCode);
             cubeQueryParserDomainBO.setConditions(null);
-            cubeQueryParserDomainBO.setFields(null);
+            //cubeQueryParserDomainBO.setFields(null);
             cubeQueryParserDomainBO.setFromSqlSelect(sqlSelect);
         });
         return this;
@@ -99,8 +99,8 @@ public class CubeQueryParserBuilder {
 
     private DsCubeQueryParserDomainBO createTSqDomainField(String datasetCode) {
         DsCubeQueryParserDomainBO tSqDomain = createTSqDomain(datasetCode);
-        tSqDomain.getFieldMap()
-        return dsCubeQueryParserDomainBO;
+        //tSqDomain.getFieldMap()
+        return null;
     }
 
 

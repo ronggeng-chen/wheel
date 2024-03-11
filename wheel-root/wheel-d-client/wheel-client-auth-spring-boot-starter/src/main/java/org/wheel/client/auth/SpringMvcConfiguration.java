@@ -1,12 +1,14 @@
 package org.wheel.client.auth;
 
 
+import cn.stylefeng.roses.kernel.security.cors.CorsFilterConfiguration;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.wheel.client.auth.security.TokenAndPermissionInterceptor;
+import org.wheel.client.auth.security.AuthJwtTokenSecurityInterceptor;
+import org.wheel.client.auth.security.PermissionSecurityInterceptor;
 
 import javax.annotation.Resource;
 
@@ -14,11 +16,13 @@ import javax.annotation.Resource;
  * spring mvc的配置
  */
 @Configuration
-@Import({cn.hutool.extra.spring.SpringUtil.class})
+@Import({cn.hutool.extra.spring.SpringUtil.class, CorsFilterConfiguration.class})
 public class SpringMvcConfiguration implements WebMvcConfigurer {
+    @Resource
+    private AuthJwtTokenSecurityInterceptor authJwtTokenSecurityInterceptor;
 
     @Resource
-    private TokenAndPermissionInterceptor tokenAndPermissionInterceptor;
+    private PermissionSecurityInterceptor permissionSecurityInterceptor;
 
     /**
      * 重写系统的默认错误提示
@@ -36,7 +40,8 @@ public class SpringMvcConfiguration implements WebMvcConfigurer {
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(tokenAndPermissionInterceptor);
+        registry.addInterceptor(authJwtTokenSecurityInterceptor);
+        registry.addInterceptor(permissionSecurityInterceptor);
     }
 
     /**

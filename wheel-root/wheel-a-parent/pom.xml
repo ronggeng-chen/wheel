@@ -35,15 +35,141 @@
         </dependency>
         <!--========================wheel||spring.starter end========================-->
         <!--========================roses||spring.starter start========================-->
+        <!--认证和鉴权模块-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>auth-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--安全模块-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>security-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--系统配置-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>config-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--数据源连接和dao框架-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>db-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--文件管理-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>file-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--资源扫描-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>scanner-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--pinyin工具类-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>pinyin-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--字典业务-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>dict-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--参数校验模块-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>validator-spring-boot-starter</artifactId>
+        </dependency>
+
         <!--系统管理基础业务-->
         <dependency>
             <groupId>cn.stylefeng.roses</groupId>
-            <artifactId>system-spring-boot-starter</artifactId>
+            <artifactId>system-integration-rest</artifactId>
         </dependency>
-        <!--默认增加内存缓存-->
+
+        <!--c端用户-->
         <dependency>
             <groupId>cn.stylefeng.roses</groupId>
-            <artifactId>cache-spring-boot-starter-memory</artifactId>
+            <artifactId>customer-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--办公处理-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>office-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--日志模块-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>log-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--定时任务-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>timer-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--短信模块-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>sms-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--消息通知-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>message-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--数据备份和迁移模块-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>migration-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--Socket模块-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>socket-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--wrapper工具-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>wrapper-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--多语言模块-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>i18n-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--多数据源配置-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>ds-container-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--硬件信息获取-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>monitor-spring-boot-starter</artifactId>
+        </dependency>
+        <!--Redis缓存-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>redis-spring-boot-starter</artifactId>
         </dependency>
         <!--========================roses||spring.starter end========================-->
         <!--mysql-->

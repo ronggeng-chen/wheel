@@ -1,6 +1,6 @@
 package org.wheel.bi.app;
 
-import cn.stylefeng.roses.kernel.db.starter.SingleDataSourceAutoConfiguration;
+import cn.stylefeng.roses.kernel.db.starter.GunsDataSourceAutoConfiguration;
 import cn.stylefeng.roses.kernel.rule.context.ApplicationPropertiesContext;
 import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
@@ -14,7 +14,7 @@ import org.springframework.cache.annotation.EnableCaching;
  */
 @Slf4j
 @MapperScan(basePackages = {"org.wheel.**.mapper"})
-@SpringBootApplication(scanBasePackages = {"cn.stylefeng", "org.wheel"}, exclude = {FlywayAutoConfiguration.class, SingleDataSourceAutoConfiguration.class})
+@SpringBootApplication(scanBasePackages = {"cn.stylefeng", "org.wheel"}, exclude = {FlywayAutoConfiguration.class, GunsDataSourceAutoConfiguration.class})
 @EnableCaching//Spring Cache 缓存
 public class BIApplication {
 
