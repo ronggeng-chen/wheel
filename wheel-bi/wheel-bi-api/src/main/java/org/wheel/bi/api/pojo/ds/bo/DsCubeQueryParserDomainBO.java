@@ -5,7 +5,10 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Getter
 @Setter
@@ -16,8 +19,8 @@ public class DsCubeQueryParserDomainBO {
 
     private SQLSelect fromSqlSelect;
 
-    private List<DsCubeQueryParserDomainFieldBO> fields;
+    private Map<String,DsCubeQueryParserDomainFieldBO> fieldMap = new HashMap<>();
 
-    private List<DsCubeQueryParserDomainConditionBO> conditions;
+    private List<DsCubeQueryParserDomainConditionBO> conditions = new ArrayList<>();
 
 }

@@ -63,8 +63,11 @@ public class CubeQueryParserBuilder {
                     if (cubeFieldStatisticalMethodEnum == DsCubeFieldStatisticalMethodEnum.TQ || cubeFieldStatisticalMethodEnum == DsCubeFieldStatisticalMethodEnum.TB) {
                         SQLSelect clone = sqlSelect.clone();
 
-
                     } else if (cubeFieldStatisticalMethodEnum == DsCubeFieldStatisticalMethodEnum.SQ || cubeFieldStatisticalMethodEnum == DsCubeFieldStatisticalMethodEnum.HB) {
+                        SQLSelect clone = sqlSelect.clone();
+                        DsCubeQueryParserDomainBO tSqDomain = createTSqDomain(datasetCode);
+                        tSqDomain.setFromSqlSelect(clone);
+                        tSqDomain.getFieldMap().put(tSqDomain.getDomainCode()+"_");
 
                     } else if (cubeFieldStatisticalMethodEnum == DsCubeFieldStatisticalMethodEnum.MEDIAN) {
 
@@ -77,8 +80,28 @@ public class CubeQueryParserBuilder {
             cubeQueryParserDomainBO.setConditions(null);
             cubeQueryParserDomainBO.setFields(null);
             cubeQueryParserDomainBO.setFromSqlSelect(sqlSelect);
-
         });
         return this;
     }
+
+    private DsCubeQueryParserDomainBO getDomain(String domainCode) {
+        return cubeQueryParser.getDomainMap().get(domainCode);
+    }
+
+    private DsCubeQueryParserDomainBO createTSqDomain(String datasetCode) {
+        String sqDomainCode = "sq_" + datasetCode;
+        DsCubeQueryParserDomainBO dsCubeQueryParserDomainBO = cubeQueryParser.getDomainMap().get(sqDomainCode);
+        if (dsCubeQueryParserDomainBO != null) {
+            dsCubeQueryParserDomainBO = cubeQueryParser.getDomainMap().put(sqDomainCode, new DsCubeQueryParserDomainBO());
+        }
+        return dsCubeQueryParserDomainBO;
+    }
+
+    private DsCubeQueryParserDomainBO createTSqDomainField(String datasetCode) {
+        DsCubeQueryParserDomainBO tSqDomain = createTSqDomain(datasetCode);
+        tSqDomain.getFieldMap()
+        return dsCubeQueryParserDomainBO;
+    }
+
+
 }
